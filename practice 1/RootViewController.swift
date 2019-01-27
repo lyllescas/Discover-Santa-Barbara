@@ -10,12 +10,15 @@ import UIKit
 
 class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
+    @IBOutlet weak var Food: UILabel!
     var pageViewController: UIPageViewController?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        Food.text = "Food"
         // Configure the page view controller and add it as a child view controller.
         self.pageViewController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
         self.pageViewController!.delegate = self
